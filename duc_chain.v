@@ -13,7 +13,7 @@ module duc_chain
     parameter BASE = 0,
     parameter DSPNO = 0,
     parameter WIDTH = 24,
-    parameter NEW_HB_INTERP = 0,
+    parameter NEW_HB_INTERP = 1,
     parameter DEVICE = "7SERIES"
   )
   (input clk, input rst, input clr,
@@ -106,7 +106,7 @@ module duc_chain
 		.rst(rst),
 		.bypass(~enable_hb1),
 		.stb_in(strobe_hb1),
-		.data_in({sample[31:16],2'b00}),// 对信号进行插值
+		.data_in({sample[31:16],2'b00}),// 露脭脨脜潞脜陆酶脨脨虏氓脰碌
 		.output_rate(cpo),
 		.stb_out(strobe_hb2),
 		.data_out(hb1_i)
